@@ -1,0 +1,14 @@
+<div class="container my-auto mt-5">
+  <div class="col">
+    <div class="row">
+      <h1>Create new Restaurant</h1>
+        <%= simple_form_for(@restaurant, html: { class: 'd-flex flex-column'}) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :category, collection: Restaurant::CATEGORY %>
+          <%= f.input :phone_number %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        <% end %>
+    </div>
+  </div>
+</div>
